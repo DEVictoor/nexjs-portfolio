@@ -1,18 +1,19 @@
-import LPageTransition from "@/components/LPageTransition";
-import { Box, Text } from "@chakra-ui/react";
+import MainLayout from "@/components/MainLayout";
 import React from "react";
+import { Box, Flex, Stack, Text, VStack } from "@chakra-ui/react";
+import { works } from "@/data/works";
 
-type IndexPageProps = {}
-type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
-
-export default function Works(props: IndexPageProps, ref: IndexPageRef) {
+export default function Works() {
   return (
-    <LPageTransition>
-      <Box padding={'15px'}>
-        <LPageTransition ref={ref}>
-          <Text>Work Page</Text>
-        </LPageTransition>
-      </Box>
-    </LPageTransition>
+    <MainLayout>
+      <Flex>
+        {works.map((e) => (
+          <VStack spacing={6}>
+            <Text fontSize={"2xl"}>{e.title}</Text>
+            <Text fontSize={"1xl"}>{e.descripcion}</Text>
+          </VStack>
+        ))}
+      </Flex>
+    </MainLayout>
   );
 }

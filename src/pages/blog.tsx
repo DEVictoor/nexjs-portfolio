@@ -1,13 +1,10 @@
-import { Box, Text } from "@chakra-ui/react";
+import MainLayout from "@/components/MainLayout";
+import { Text } from "@chakra-ui/react";
 
 export default function Blog() {
   return (
-    <>
-      <main>
-        <Box>
-          <Text fontSize={"2xl"}>Page About</Text>
-        </Box>
-      </main>
-    </>
+    <MainLayout>
+      <Text>Blog Page</Text>
+    </MainLayout>
   );
 }

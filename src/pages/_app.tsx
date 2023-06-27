@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider>
-      <AnimatePresence initial={false} mode="popLayout">
+      <AnimatePresence mode="wait">
         <Component key={pageKey} {...pageProps} />
       </AnimatePresence>
     </ChakraProvider>

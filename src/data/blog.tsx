@@ -1,8 +1,6 @@
-export const Blogs : IBlog[] = [
-  { title: 'Conociendo LunarVim', id: 'asa'}
-];
+export const Blogs: IBlog[] = [{ title: "Conociendo LunarVim", id: 1 }];
 
 export interface IBlog {
-  title : string;
-  id : number;
+  title: string;
+  id: number;
 }
