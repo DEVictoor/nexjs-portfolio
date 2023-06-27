@@ -26,7 +26,7 @@ export const NavBarCel = () => {
 
   useEffect(() => {
     push(currentTab.link);
-  }, [currentTab]);
+  }, [currentTab, push]);
 
   return (
     <Box display={["block", "none"]}>

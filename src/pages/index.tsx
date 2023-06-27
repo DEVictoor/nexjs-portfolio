@@ -29,7 +29,7 @@ export default function Home() {
           justifyContent={"center"}
         >
           <Text fontSize={["5xl", "6xl"]} textAlign={"center"} as="b">
-            I'm Victor Mireles
+            I&apos;m Victor Mireles
           </Text>
           <Text textAlign={"center"} fontSize={["3xl", "4xl"]}>
             Back-end developer
