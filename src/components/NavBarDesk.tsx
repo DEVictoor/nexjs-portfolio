@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   ButtonGroup,
   Flex,
   HStack,
@@ -8,8 +7,6 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { Enlaces, ITab } from "@/data/links";
-import { color, motion } from "framer-motion";
-import { useState } from "react";
 import { useRouter } from "next/router";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 

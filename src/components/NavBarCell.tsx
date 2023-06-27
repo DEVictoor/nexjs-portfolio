@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/icons";
 import { Mod } from "@/helpers/Mod";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
 
 export const NavBarCel = () => {
   const { push, pathname } = useRouter();
@@ -26,24 +25,20 @@ export const NavBarCel = () => {
 
   useEffect(() => {
     push(currentTab.link);
-  }, [currentTab, push]);
+  }, [currentTab]);
 
   return (
     <Box display={["block", "none"]}>
       <Flex justifyContent={"space-around"} alignItems={"center"}>
         <AtSignIcon boxSize={"5"} color={"gray"} cursor={"pointer"} />
         <HStack spacing={12}>
-          <ArrowBackIcon
-            boxSize={"6"}
-            onClick={() => handleMenu(-1)}
-            cursor={"pointer"}
-          />
+          <Box onClick={() => handleMenu(-1)} cursor={"pointer"}>
+            <ArrowBackIcon boxSize={"6"} />
+          </Box>
           <Text fontSize={"2xl"}>{currentTab.title}</Text>
-          <ArrowForwardIcon
-            boxSize={"6"}
-            onClick={() => handleMenu(+1)}
-            cursor={"pointer"}
-          />
+          <Box onClick={() => handleMenu(+1)} cursor={"pointer"}>
+            <ArrowForwardIcon boxSize={"6"} />
+          </Box>
         </HStack>
         <MoonIcon boxSize={"5"} color={"gray"} cursor={"pointer"} />
       </Flex>
