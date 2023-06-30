@@ -25,5 +25,5 @@ jobs:
       - run: echo "$SSH_KEY" >> ~/.ssh/github-action
       - run: chmod 400 ~/.ssh/github-action
       - run: echo -e "Host vps\n\tUser root\n\tHostname $HOST\n\tIdentityFile ~/.ssh/github-action\n\tStrictHostKeyChecking No" >> ~/.ssh/config
-      - run: rsync -re ./build/ vps:/root/projects/nexjs-portfolio/build
+      - run: rsync -re ssh ./build/ vps:/root/projects/nexjs-portfolio/build
       - run: ssh vps "pm2 restart portfolio-victor"
