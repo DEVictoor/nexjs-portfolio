@@ -22,7 +22,7 @@ export const NavBarDesk = () => {
   };
 
   return (
-    <Box display={["none", "block"]}>
+    <Box display={["none", "block"]} position={"static"} boxSize={"full"}>
       <Flex justifyContent={"center"}>
         <HStack spacing={12} borderRadius={"20"} boxShadow={"2xl"}>
           <ButtonGroup alignItems={"center"}>

@@ -8,10 +8,9 @@ export default function Home() {
     <MainLayout>
       <Stack
         direction={["column", "column", "column", "row", "row"]}
-        align={"center"}
-        justify={"center"}
-        marginTop={"10"}
-        spacing={[30, 30, 30, 31, 32]}
+        alignContent={"center"}
+        justifyContent={"center"}
+        spacing={[30, 30, 30, 39, 37]}
       >
         <Flex align={"center"} justify="center">
           <Image
@@ -22,14 +21,9 @@ export default function Home() {
             alt="Victor Mireles"
           />
         </Flex>
-        <VStack
-          gap={2}
-          alignContent={["center", "flex-start"]}
-          alignItems={["center", "flex-start"]}
-          justifyContent={"center"}
-        >
+        <VStack gap={2} align={["center", "center", "center", "flex-start"]}>
           <Text fontSize={["5xl", "6xl"]} textAlign={"center"} as="b">
-            I&apos;m Victor Mireles Me gusta jugar lol,ect
+            I&apos;m Victor Mireles
           </Text>
           <Text textAlign={"center"} fontSize={["3xl", "4xl"]}>
             Back-end developer

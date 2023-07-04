@@ -41,9 +41,9 @@ enum Database {
 
 export const works: IWork[] = [
   {
-    title: "CVGenerator",
+    title: "Generador de CV",
     descripcion:
-      "Proyecto realizado durante mi desarrollo en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web",
+      "Proyecto realizado durante en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web. La principal funcion que tuve en el proyecto fue la de encargarme de estructurar el proyecto, en la parte del bacckedn tambien hice la conexion a la base de datos con PDO y para el deploy utilie docker.",
     tecnologies: {
       frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.BOOTSTRAP],
       backend: [Backend.PHP, Backend.DOCKER],
@@ -51,9 +51,9 @@ export const works: IWork[] = [
     },
   },
   {
-    title: "CVGenerator",
+    title: "Postmaster XIII",
     descripcion:
-      "Proyecto realizado durante mi desarrollo en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web",
+      "Proyecto realizado durante en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web. La principal funcion que tuve en el proyecto fue la de encargarme de estructurar el proyecto, en la parte del bacckedn tambien hice la conexion a la base de datos con PDO y para el deploy utilie docker.",
     tecnologies: {
       frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.BOOTSTRAP],
       backend: [Backend.PHP, Backend.DOCKER],
@@ -61,19 +61,9 @@ export const works: IWork[] = [
     },
   },
   {
-    title: "CVGenerator",
+    title: "CIIS XXIII",
     descripcion:
-      "Proyecto realizado durante mi desarrollo en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web",
-    tecnologies: {
-      frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.BOOTSTRAP],
-      backend: [Backend.PHP, Backend.DOCKER],
-      databases: Database.MYSQL,
-    },
-  },
-  {
-    title: "CVGenerator",
-    descripcion:
-      "Proyecto realizado durante mi desarrollo en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web",
+      "Proyecto realizado durante en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web. La principal funcion que tuve en el proyecto fue la de encargarme de estructurar el proyecto, en la parte del bacckedn tambien hice la conexion a la base de datos con PDO y para el deploy utilie docker.",
     tecnologies: {
       frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.BOOTSTRAP],
       backend: [Backend.PHP, Backend.DOCKER],
