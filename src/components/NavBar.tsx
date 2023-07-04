@@ -4,7 +4,7 @@ import { NavBarDesk } from "./NavBarDesk";
 
 export const NavBar = () => {
   return (
-    <motion.div layoutId="LPageTransition" style={{ zIndex: 0 }}>
+    <motion.div layoutId="LPageTransition" style={{ zIndex: 0, height: "10%" }}>
       <NavBarCel />
       <NavBarDesk />
     </motion.div>
