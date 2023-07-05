@@ -1,4 +1,11 @@
-import { Box, Button, Flex, HStack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { Enlaces } from "@/data/links";
 import { useEffect, useState } from "react";
 import {
@@ -15,6 +22,8 @@ export const NavBarCel = () => {
 
   const enlaceFound = Enlaces.find((e) => e.link == pathname);
 
+  const color = useColorModeValue("white", "gray.800");
+
   const [currentTab, SetCurrentTab] = useState(enlaceFound ?? Enlaces[0]);
 
   const handleMenu = (direction: number) => {
@@ -28,7 +37,14 @@ export const NavBarCel = () => {
   }, [currentTab]);
 
   return (
-    <Box display={["block", "none"]}>
+    <Box
+      display={["block", "none"]}
+      position={"fixed"}
+      width={"100%"}
+      top={"0"}
+      backgroundColor={color}
+      zIndex={"100"}
+    >
       <Flex justifyContent={"space-around"} alignItems={"center"}>
         <AtSignIcon boxSize={"5"} color={"gray"} cursor={"pointer"} />
         <HStack spacing={12}>
