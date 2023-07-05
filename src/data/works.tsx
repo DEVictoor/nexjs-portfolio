@@ -9,7 +9,7 @@ interface IWork {
 
 interface techs {
   frontend: Frontend[];
-  backend: Backend[];
+  backend?: Backend[];
   databases?: Database | Database[];
 }
 
@@ -53,21 +53,19 @@ export const works: IWork[] = [
   {
     title: "Postmaster XIII",
     descripcion:
-      "Proyecto realizado durante en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web. La principal funcion que tuve en el proyecto fue la de encargarme de estructurar el proyecto, en la parte del bacckedn tambien hice la conexion a la base de datos con PDO y para el deploy utilie docker.",
+      "Cada año en mi universidad se realiza el evento llamado 'Postmaster', el cual trata de que los egresados cuenten su experiencia en sus trabajos con los demas estudiantes.",
     tecnologies: {
-      frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.BOOTSTRAP],
-      backend: [Backend.PHP, Backend.DOCKER],
+      frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.REACT],
+      backend: [Backend.NEST, Backend.DOCKER],
       databases: Database.MYSQL,
     },
   },
   {
     title: "CIIS XXIII",
     descripcion:
-      "Proyecto realizado durante en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web. La principal funcion que tuve en el proyecto fue la de encargarme de estructurar el proyecto, en la parte del bacckedn tambien hice la conexion a la base de datos con PDO y para el deploy utilie docker.",
+      "El Congreso Internacion de Informatica y Sistemas es un evento que se realiza cada año en mi carreara, tuve la responsabilidad de encargarme de la pagina web.",
     tecnologies: {
-      frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.BOOTSTRAP],
-      backend: [Backend.PHP, Backend.DOCKER],
-      databases: Database.MYSQL,
+      frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.REACT],
     },
   },
 ];

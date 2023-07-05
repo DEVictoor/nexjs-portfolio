@@ -6,29 +6,37 @@ import { works } from "@/data/works";
 export default function Works() {
   return (
     <MainLayout>
-      <Flex justifyContent={"center"} position={"relative"} top={"3em"}>
-        <VStack w={"70%"} spacing={"10"}>
+      <Flex justifyContent={"center"}>
+        <VStack spacing={"10"} w={"70%"} position={"relative"} top={"5"}>
           {works.map((e, i) => (
-            <Flex direction={"column"} gap={"5"} key={i}>
+            <Flex direction={"column"} gap={"3"} key={i}>
               <Text fontSize={"3xl"} as={"b"}>
                 {e.title}
               </Text>
-              <Text fontSize={"1xl"}>{e.descripcion}</Text>
+              <Text fontSize={"1xl"} textAlign={"justify"}>
+                {e.descripcion}
+              </Text>
               <Flex gap={"3"}>
                 <Text as={"b"}>Frontend:</Text>
                 {e.tecnologies.frontend.map((c, i) => (
                   <Text key={i}>{c}</Text>
                 ))}
               </Flex>
-              <Flex gap={"3"}>
-                <Text as={"b"}>Backend:</Text>
-                {e.tecnologies.backend.map((c, i) => (
-                  <Text key={i}>{c}</Text>
-                ))}
-              </Flex>
+              {e.tecnologies.backend && (
+                <Flex gap={"3"}>
+                  <Text as={"b"}>Backend:</Text>
+                  {e.tecnologies?.backend?.map((c, i) => (
+                    <Text key={i}>{c}</Text>
+                  ))}
+                </Flex>
+              )}
+              {e.tecnologies.databases && (
+                <Flex gap={"3"}>
+                  <Text as={"b"}>Database:</Text>
+                  <Text>{e.tecnologies.databases}</Text>
+                </Flex>
+              )}
             </Flex>
-            // <VStack spacing={6} key={i}>
-            // </VStack>
           ))}
         </VStack>
       </Flex>

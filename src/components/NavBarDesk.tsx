@@ -5,6 +5,7 @@ import {
   HStack,
   Text,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Enlaces, ITab } from "@/data/links";
 import { useRouter } from "next/router";
@@ -15,6 +16,8 @@ export const NavBarDesk = () => {
 
   const enlaceFound = Enlaces.find((e) => e.link == pathname);
 
+  const color = useColorModeValue("white", "gray.800");
+
   const { colorMode, toggleColorMode } = useColorMode();
 
   const handleMenu = (link: string) => {
@@ -22,7 +25,14 @@ export const NavBarDesk = () => {
   };
 
   return (
-    <Box display={["none", "block"]} position={"sticky"} zIndex={2}>
+    <Box
+      display={["none", "block"]}
+      position={"fixed"}
+      width={"100%"}
+      top={"2"}
+      backgroundColor={color}
+      zIndex={"100"}
+    >
       <Flex justifyContent={"center"}>
         <HStack spacing={12} borderRadius={"20"} boxShadow={"2xl"}>
           <ButtonGroup alignItems={"center"}>
