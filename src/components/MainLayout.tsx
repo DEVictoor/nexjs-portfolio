@@ -9,7 +9,7 @@ interface Props {
 
 const MainLayout: React.FunctionComponent<Props> = ({ children }: Props) => {
   return (
-    <Box p={"4"} h={"100vh"} w={"100vw"}>
+    <Box p={["0", "4"]} h={"100vh"} w={"100vw"}>
       <NavBar />
       <Flex h={"90%"} w={"100%"}>
         <LPageTransition>{children}</LPageTransition>

@@ -38,15 +38,20 @@ export const NavBarCel = () => {
 
   return (
     <Box
-      display={["block", "none"]}
+      display={["box", "none"]}
       position={"fixed"}
-      width={"100%"}
+      left={"0"}
       top={"0"}
+      width={"100vw"}
       backgroundColor={color}
+      padding={"2"}
       zIndex={"100"}
     >
-      <Flex justifyContent={"space-around"} alignItems={"center"}>
+      <Flex justify={"center"} align={"center"} justifyContent={"space-evenly"}>
+        {/*  Avatar Icon */}
         <AtSignIcon boxSize={"5"} color={"gray"} cursor={"pointer"} />
+
+        {/* Menu */}
         <HStack spacing={12}>
           <Box onClick={() => handleMenu(-1)} cursor={"pointer"}>
             <ArrowBackIcon boxSize={"6"} />
@@ -56,6 +61,8 @@ export const NavBarCel = () => {
             <ArrowForwardIcon boxSize={"6"} />
           </Box>
         </HStack>
+
+        {/* Icon dark */}
         <MoonIcon boxSize={"5"} color={"gray"} cursor={"pointer"} />
       </Flex>
     </Box>

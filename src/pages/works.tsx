@@ -7,7 +7,12 @@ export default function Works() {
   return (
     <MainLayout>
       <Flex justifyContent={"center"}>
-        <VStack spacing={"10"} w={"70%"} position={"relative"} top={"5"}>
+        <VStack
+          spacing={"10"}
+          w={"70%"}
+          position={"relative"}
+          top={["16", "5"]}
+        >
           {works.map((e, i) => (
             <Flex direction={"column"} gap={"3"} key={i}>
               <Text fontSize={"3xl"} as={"b"}>
