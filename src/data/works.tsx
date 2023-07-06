@@ -14,13 +14,13 @@ interface techs {
 }
 
 enum Frontend {
-  JS = "javascript",
-  HTML = "html",
+  JS = "Javascript",
+  HTML = "Html",
   REACT = "Reactjs",
   JQUERY = "Jquery",
-  ANGULAR = "angular",
-  CSS = "css",
-  BOOTSTRAP = "boostrap",
+  ANGULAR = "Angular",
+  CSS = "Css",
+  BOOTSTRAP = "Boostrap",
 }
 
 enum Backend {

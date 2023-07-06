@@ -7,11 +7,16 @@ import {
   Text,
   Button,
   Box,
+  useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import { CopyIcon, DownloadIcon } from "@chakra-ui/icons";
 import { SocialMedia } from "@/components/SocialMedia";
 
 export default function Home() {
+  const color = useColorModeValue("gray.800", "teal");
+  const { colorMode } = useColorMode();
+
   return (
     <MainLayout>
       <Flex
@@ -24,18 +29,18 @@ export default function Home() {
           direction={["column", "column", "column", "row", "row"]}
           alignContent={"center"}
           justifyContent={"center"}
-          spacing={[30, 30, 30, 39, 37]}
+          spacing={[30, 30, 30, 39, 50]}
         >
           <Flex align={"center"} justify="center">
             <Image
               borderRadius={"full"}
               objectFit="cover"
-              boxSize={["202px", "320px"]}
+              boxSize={["180px", "320px"]}
               src="/perfil.jpg"
               alt="Victor Mireles"
             />
           </Flex>
-          <VStack gap={2} align={["center", "center", "center", "flex-start"]}>
+          <VStack gap={3} align={["center", "center", "center", "flex-start"]}>
             <Text
               width={["80%", "100%"]}
               fontSize={["5xl", "6xl"]}
@@ -48,16 +53,22 @@ export default function Home() {
               Back-end developer
             </Text>
             <Stack
-              p={3}
               direction={["column", "row"]}
               gap={2}
               alignItems={["center", "flex-start"]}
             >
-              <Button colorScheme="gray" variant={"solid"} gap="13px">
-                <DownloadIcon />
-                Descargar CV
-              </Button>
-              <Button colorScheme="gray" variant="outline" gap={"13px"}>
+              {colorMode === "dark" ? (
+                <Button colorScheme={color} variant={"solid"} gap="13px">
+                  <DownloadIcon />
+                  Descargar CV
+                </Button>
+              ) : (
+                <Button bg={color} color={"white"} variant={"solid"} gap="13px">
+                  <DownloadIcon />
+                  Descargar CV
+                </Button>
+              )}
+              <Button colorScheme={color} variant="outline" gap="13px">
                 <CopyIcon />
                 Contact me
               </Button>
