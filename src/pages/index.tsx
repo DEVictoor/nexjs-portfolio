@@ -14,7 +14,12 @@ import { SocialMedia } from "@/components/SocialMedia";
 export default function Home() {
   return (
     <MainLayout>
-      <Flex height={"100%"} width={"100vw"} align={"center"} justify={"center"}>
+      <Flex
+        height={"100vh"}
+        width={"100vw"}
+        align={"center"}
+        justify={"center"}
+      >
         <Stack
           direction={["column", "column", "column", "row", "row"]}
           alignContent={"center"}
@@ -31,7 +36,12 @@ export default function Home() {
             />
           </Flex>
           <VStack gap={2} align={["center", "center", "center", "flex-start"]}>
-            <Text fontSize={["5xl", "6xl"]} textAlign={"center"} as="b">
+            <Text
+              width={["80%", "100%"]}
+              fontSize={["5xl", "6xl"]}
+              textAlign={"center"}
+              as="b"
+            >
               I&apos;m Victor Mireles
             </Text>
             <Text textAlign={"center"} fontSize={["3xl", "4xl"]}>
@@ -43,11 +53,16 @@ export default function Home() {
               gap={2}
               alignItems={["center", "flex-start"]}
             >
-              <Button bg={"black"} variant="solid" color={"white"} gap="13px">
+              <Button
+                colorScheme="teal"
+                variant={"solid"}
+                // color={"white"}
+                gap="13px"
+              >
                 <DownloadIcon />
-                Curriculum
+                Descargar CV
               </Button>
-              <Button colorScheme="black" variant="outline" gap={"13px"}>
+              <Button colorScheme="teal" variant="outline" gap={"13px"}>
                 <CopyIcon />
                 Contact me
               </Button>
