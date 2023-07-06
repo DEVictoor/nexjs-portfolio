@@ -4,6 +4,7 @@ import {
   Flex,
   HStack,
   Text,
+  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Enlaces } from "@/data/links";
@@ -13,6 +14,7 @@ import {
   ArrowForwardIcon,
   AtSignIcon,
   MoonIcon,
+  SunIcon,
 } from "@chakra-ui/icons";
 import { Mod } from "@/helpers/Mod";
 import { useRouter } from "next/router";
@@ -23,6 +25,8 @@ export const NavBarCel = () => {
   const enlaceFound = Enlaces.find((e) => e.link == pathname);
 
   const color = useColorModeValue("white", "gray.800");
+
+  const { colorMode, toggleColorMode } = useColorMode();
 
   const [currentTab, SetCurrentTab] = useState(enlaceFound ?? Enlaces[0]);
 
@@ -63,7 +67,25 @@ export const NavBarCel = () => {
         </HStack>
 
         {/* Icon dark */}
-        <MoonIcon boxSize={"5"} color={"gray"} cursor={"pointer"} />
+        <Box>
+          {colorMode == "light" ? (
+            <MoonIcon
+              onClick={toggleColorMode}
+              boxSize={"5"}
+              color={"gray"}
+              cursor={"pointer"}
+              alignSelf={"center"}
+            />
+          ) : (
+            <SunIcon
+              onClick={toggleColorMode}
+              boxSize={"5"}
+              color={"gray"}
+              cursor={"pointer"}
+              alignSelf={"center"}
+            />
+          )}
+        </Box>
       </Flex>
     </Box>
   );

@@ -53,16 +53,11 @@ export default function Home() {
               gap={2}
               alignItems={["center", "flex-start"]}
             >
-              <Button
-                colorScheme="teal"
-                variant={"solid"}
-                // color={"white"}
-                gap="13px"
-              >
+              <Button colorScheme="gray" variant={"solid"} gap="13px">
                 <DownloadIcon />
                 Descargar CV
               </Button>
-              <Button colorScheme="teal" variant="outline" gap={"13px"}>
+              <Button colorScheme="gray" variant="outline" gap={"13px"}>
                 <CopyIcon />
                 Contact me
               </Button>
