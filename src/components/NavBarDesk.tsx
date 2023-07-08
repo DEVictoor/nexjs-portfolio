@@ -29,7 +29,9 @@ export const NavBarDesk = () => {
       display={["none", "block"]}
       position={"fixed"}
       width={"100%"}
-      top={"2"}
+      top={0}
+      paddingY={3}
+      left={0}
       backgroundColor={color}
       zIndex={"100"}
     >

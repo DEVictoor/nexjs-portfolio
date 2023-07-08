@@ -49,11 +49,13 @@ export const works: IWork[] = [
       backend: [Backend.PHP, Backend.DOCKER],
       databases: Database.MYSQL,
     },
+    repo: "https://github.com/DEVictoor/GeneratorCV",
+    enlace: "https://github.com/DEVictoor/GeneratorCV",
   },
   {
     title: "Postmaster XIII",
     descripcion:
-      "Cada año en mi universidad se realiza el evento llamado 'Postmaster', el cual trata de que los egresados cuenten su experiencia en sus trabajos con los demas estudiantes.",
+      "Cada año en mi universidad se realiza el evento llamado 'Postmaster', el cual tiene como objetivo tener un encuentro entre egresados y estudiantes de la carrera mediante charlas y exposiciones",
     tecnologies: {
       frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.REACT],
       backend: [Backend.NEST, Backend.DOCKER],
