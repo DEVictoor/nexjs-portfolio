@@ -61,6 +61,8 @@ export const works: IWork[] = [
       backend: [Backend.NEST, Backend.DOCKER],
       databases: Database.MYSQL,
     },
+    enlace:
+      "https://postmaster2022.vercel.app/?vercelToolbarCode=F_DCErgrq5Kajxv",
   },
   {
     title: "CIIS XXIII",
@@ -69,5 +71,7 @@ export const works: IWork[] = [
     tecnologies: {
       frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.REACT],
     },
+    enlace:
+      "https://ciis-page-congreso.vercel.app/?vercelToolbarCode=5yZTMPYxttq0Ktl",
   },
 ];
