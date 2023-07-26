@@ -1,5 +1,5 @@
 import MainLayout from "@/components/MainLayout";
-import React, { useState } from "react";
+import React, { MouseEventHandler, useState } from "react";
 import {
   Button,
   Flex,
@@ -20,12 +20,17 @@ import {
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
 import { TfiGallery } from "react-icons/tfi";
-import { Projects as works } from "@/data/projects";
+import { IImage, Projects as works } from "@/data/projects";
 import { Carousel } from "@/components/Carousel";
 
 export default function Projects() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  console.log(works);
+  const [currentImages, SetCurrentImages] = useState([] as IImage[]);
+
+  const onClickModal = (e: any, images: IImage[]) => {
+    onOpen();
+    SetCurrentImages(images);
+  };
 
   return (
     <MainLayout>
@@ -62,33 +67,33 @@ export default function Projects() {
 
                   {/* Imagenes */}
                   {e.images && (
-                    <>
-                      <Button variant={"outline"} onClick={onOpen}>
-                        <TfiGallery />
-                      </Button>
-
-                      <Modal
-                        onClose={onClose}
-                        // size={"full"}
-                        size={["sm", "sm", "sm", "2xl", "6xl"]}
-                        isOpen={isOpen}
-                        isCentered
-                      >
-                        <ModalOverlay />
-                        <ModalContent height={"auto"}>
-                          <ModalHeader />
-                          <ModalCloseButton />
-                          <ModalBody>
-                            <Carousel images={e.images} />
-                          </ModalBody>
-                          {/* <ModalFooter /> */}
-                        </ModalContent>
-                      </Modal>
-                    </>
+                    <Button
+                      variant={"outline"}
+                      onClick={(event) => onClickModal(event, e.images ?? [])}
+                    >
+                      <TfiGallery />
+                    </Button>
                   )}
                 </HStack>
               </VStack>
 
+              <Modal
+                onClose={onClose}
+                // size={"full"}
+                size={["sm", "sm", "sm", "2xl", "6xl"]}
+                isOpen={isOpen}
+                isCentered
+              >
+                <ModalOverlay />
+                <ModalContent height={"auto"}>
+                  <ModalHeader />
+                  <ModalCloseButton />
+                  <ModalBody>
+                    <Carousel images={currentImages} />
+                  </ModalBody>
+                  {/* <ModalFooter /> */}
+                </ModalContent>
+              </Modal>
               {/* Descripcion */}
               <Text
                 fontSize={"1xl"}

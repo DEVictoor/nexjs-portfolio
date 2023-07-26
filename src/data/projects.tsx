@@ -65,7 +65,7 @@ export const Projects: IProject[] = [
       databases: Database.MYSQL,
     },
     repo: "https://github.com/DEVictoor/GeneratorCV",
-    // enlace: "https://github.com/DEVictoor/GeneratorCV",
+    enlace: "https://github.com/DEVictoor/GeneratorCV",
     images: [
       {
         id: 1,
@@ -110,15 +110,15 @@ export const Projects: IProject[] = [
     },
     enlace:
       "https://ciis-page-congreso.vercel.app/?vercelToolbarCode=5yZTMPYxttq0Ktl",
-    // images: [
-    //   {
-    //     id: 1,
-    //     url: "https://res.cloudinary.com/dwsstshfy/image/upload/v1689133161/CIIS%20XXIII/Screenshot_2023-07-11_at_22-34-52_CIIS_XXIII_ojbcsn.png",
-    //   },
-    //   {
-    //     id: 2,
-    //     url: "https://res.cloudinary.com/dwsstshfy/image/upload/v1689133161/CIIS%20XXIII/Screenshot_2023-07-11_at_22-38-22_CIIS_XXIII_vkhixf.png",
-    //   },
-    // ],
+    images: [
+      {
+        id: 1,
+        url: "https://res.cloudinary.com/dwsstshfy/image/upload/v1689133161/CIIS%20XXIII/Screenshot_2023-07-11_at_22-34-52_CIIS_XXIII_ojbcsn.png",
+      },
+      {
+        id: 2,
+        url: "https://res.cloudinary.com/dwsstshfy/image/upload/v1689133161/CIIS%20XXIII/Screenshot_2023-07-11_at_22-38-22_CIIS_XXIII_vkhixf.png",
+      },
+    ],
   },
 ];
