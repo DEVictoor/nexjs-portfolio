@@ -3,7 +3,6 @@ import React, { MouseEventHandler, useState } from "react";
 import {
   Button,
   Flex,
-  Image,
   HStack,
   Link,
   Modal,
@@ -15,7 +14,6 @@ import {
   VStack,
   useDisclosure,
   ModalHeader,
-  ModalFooter,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
@@ -79,7 +77,6 @@ export default function Projects() {
 
               <Modal
                 onClose={onClose}
-                // size={"full"}
                 size={["sm", "sm", "sm", "2xl", "6xl"]}
                 isOpen={isOpen}
                 isCentered
@@ -95,13 +92,7 @@ export default function Projects() {
                 </ModalContent>
               </Modal>
               {/* Descripcion */}
-              <Text
-                fontSize={"1xl"}
-                textAlign={"justify"}
-                width={"full"}
-                // borderColor={"black"}
-                // border={"1px"}
-              >
+              <Text fontSize={"1xl"} textAlign={"justify"} width={"full"}>
                 {e.descripcion}
               </Text>
 

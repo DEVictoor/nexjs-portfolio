@@ -1,77 +1,30 @@
-interface IWork {
-  title: string;
-  descripcion: string;
-  tecnologies: techs;
-  enlace?: string;
-  repo?: string;
-  images?: string[];
-}
-
-interface techs {
-  frontend: Frontend[];
-  backend?: Backend[];
-  databases?: Database | Database[];
-}
-
-enum Frontend {
-  JS = "Javascript",
-  HTML = "Html",
-  REACT = "Reactjs",
-  JQUERY = "Jquery",
-  ANGULAR = "Angular",
-  CSS = "Css",
-  BOOTSTRAP = "Boostrap",
-}
-
-enum Backend {
-  NODE = "Nodejs",
-  PHP = "Php",
-  LARAVEL = "Laravel",
-  NEST = "Nestjs",
-  EX = "Expressjs",
-  DOCKER = "Docker",
-  PUNTONET = ".Net",
-}
-
-enum Database {
-  MYSQL = "MYSQL",
-  PSQL = "Postgresql",
-  MONGO = "Mongodb",
-}
-
 export const works: IWork[] = [
   {
-    title: "Generador de CV",
-    descripcion:
-      "Proyecto realizado durante en la universidad, el cual tenia como principal objetivo obtener un cv en formato pdf mediante formularios web. La principal funcion que tuve en el proyecto fue la de encargarme de estructurar el proyecto, en la parte del bacckedn tambien hice la conexion a la base de datos con PDO y para el deploy utilie docker.",
-    tecnologies: {
-      frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.BOOTSTRAP],
-      backend: [Backend.PHP, Backend.DOCKER],
-      databases: Database.MYSQL,
-    },
-    repo: "https://github.com/DEVictoor/GeneratorCV",
-    enlace: "https://github.com/DEVictoor/GeneratorCV",
+    empresa: "Innovamos Contigo",
+    labor: "Backend Developer",
+    aporte:
+      "Encargado en un comienzo  de hacer el mantenimiento de su pagina web, mas adelante tambien estuve a cargo de renovar la pagina web para diferentes negocios de mi ciudad.",
+    // inicio: new Date("05-11-2021"),
+    inicio: new Date("2021-11-05"),
+    // fin: new Date("05-01-2022"),
+    fin: new Date("2022-01-05"),
   },
   {
-    title: "Postmaster XIII",
-    descripcion:
-      "Cada año en mi universidad se realiza el evento llamado 'Postmaster', el cual tiene como objetivo tener un encuentro entre egresados y estudiantes de la carrera mediante charlas y exposiciones",
-    tecnologies: {
-      frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.REACT],
-      backend: [Backend.NEST, Backend.DOCKER],
-      databases: Database.MYSQL,
-    },
-    enlace:
-      "https://postmaster2022.vercel.app/?vercelToolbarCode=F_DCErgrq5Kajxv",
-  },
-  {
-    title: "CIIS XXIII",
-    descripcion:
-      "El Congreso Internacion de Informatica y Sistemas es un evento que se realiza cada año en mi carreara, tuve la responsabilidad de encargarme de la pagina web.",
-    tecnologies: {
-      frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.REACT],
-    },
-    enlace:
-      "https://ciis-page-congreso.vercel.app/?vercelToolbarCode=5yZTMPYxttq0Ktl",
+    empresa: "Epiko Technology",
+    labor: "Desarrollador web",
+    aporte:
+      "Estuve encargado de desarrollar pequeñas funcionalidad en su sistema de facturación electrónica, mas adelante desarrolle un sistema para gestionar creditos financiones para un negocio de mi ciudad",
+    // inicio: new Date("02-08-2022"),
+    inicio: new Date("2022-08-02"),
+    // fin: new Date("02-03-2022"),
+    fin: new Date("2023-03-02"),
   },
 ];
+
+export interface IWork {
+  empresa: string;
+  labor: string;
+  aporte: string;
+  inicio: Date;
+  fin: Date;
+}
