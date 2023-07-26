@@ -15,6 +15,7 @@ import {
   VStack,
   useDisclosure,
   ModalHeader,
+  ModalFooter,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
@@ -24,6 +25,7 @@ import { Carousel } from "@/components/Carousel";
 
 export default function Projects() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  console.log(works);
 
   return (
     <MainLayout>
@@ -65,14 +67,21 @@ export default function Projects() {
                         <TfiGallery />
                       </Button>
 
-                      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+                      <Modal
+                        onClose={onClose}
+                        // size={"full"}
+                        size={["sm", "sm", "sm", "2xl", "6xl"]}
+                        isOpen={isOpen}
+                        isCentered
+                      >
                         <ModalOverlay />
-                        <ModalContent>
+                        <ModalContent height={"auto"}>
                           <ModalHeader />
                           <ModalCloseButton />
                           <ModalBody>
                             <Carousel images={e.images} />
                           </ModalBody>
+                          {/* <ModalFooter /> */}
                         </ModalContent>
                       </Modal>
                     </>

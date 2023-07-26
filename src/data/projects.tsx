@@ -48,7 +48,7 @@ export const Projects: IProject[] = [
   {
     title: "Scred: Sistema para un financiera",
     descripcion:
-      "Como parte de mi prácticas hice junto con mis compañeros este proyecto para un financiera, el cual consistia  en forma general de gestionar creditos para las diferentes Mypes de mi ciudad.",
+      "Como parte de mi prácticas hice junto con mis compañeros este proyecto para una financiera, el cual consistia  en forma general de gestionar creditos para las diferentes Mypes de mi ciudad.",
     tecnologies: {
       frontend: [Frontend.JS, Frontend.HTML, Frontend.CSS, Frontend.BOOTSTRAP],
       backend: [Backend.PHP, Backend.DOCKER, Backend.LARAVEL],
@@ -110,5 +110,15 @@ export const Projects: IProject[] = [
     },
     enlace:
       "https://ciis-page-congreso.vercel.app/?vercelToolbarCode=5yZTMPYxttq0Ktl",
+    // images: [
+    //   {
+    //     id: 1,
+    //     url: "https://res.cloudinary.com/dwsstshfy/image/upload/v1689133161/CIIS%20XXIII/Screenshot_2023-07-11_at_22-34-52_CIIS_XXIII_ojbcsn.png",
+    //   },
+    //   {
+    //     id: 2,
+    //     url: "https://res.cloudinary.com/dwsstshfy/image/upload/v1689133161/CIIS%20XXIII/Screenshot_2023-07-11_at_22-38-22_CIIS_XXIII_vkhixf.png",
+    //   },
+    // ],
   },
 ];
